@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+
+.cards-container{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(68, 117, 136, 0.548);
+    min-height: 100vh;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px; /* faire margin entre les elements a l'interieur de cardcontainer*/
+}
+.card{
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.5s;
+    
+}
+.card:hover{
+    transform: translateY(-10px);
+    margin-top: 10px;
+}
+.card-header{
+    height: 200px;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header img{
+    
+    height: 100%;
+    width: 100%;
+    filter: gray; /* IE5+ */
+    filter: grayscale(1);
+    transition: all .5s ;
+}
+.card-header:hover img {
+    filter: none;
+      filter: grayscale(0);
+      transform: scale(1.08);
+}
+.card-header:hover .coeur{
+    opacity: 0.6;
+    transform: translate(50px);
+}
+.coeur{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;/*centrer horizontal */
+    align-items: center; /*centrer vertical */
+    transition: 0.8s ;
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left:-50px;
+}
+.bi{
+    color: white;
+}
+.card-text{
+    padding: 30px;;
+}
+h4{
+    font-size: 25px;
+    margin: 10px;
+    color: cornflowerblue;
+}
+p{
+    font-size: 14px;
+    font-family: 'Poppins';
+    
+}
